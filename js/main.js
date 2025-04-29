@@ -47,10 +47,33 @@ const productos=[
 //     products.appendChild(contenedor)
 // })
 
-let productsContainer= document.getElementById("products-containe")
+let cartProducts=[]
+let productsContainer= document.getElementById("products-container")
 
 function renderProductos(productsArrays){
     productsArrays.forEach(producto => {
         const cart = document.createElement("div")
-    });
+        cart.innerHTML=`<h3> ${producto.nombre}</h3>
+                        <p> ${producto.precio}</p>
+                        <button class="productoAgregar" id="${producto.id}">Agregar</h4>`
+            
+            productsContainer.appendChild(cart)
+        
+    })
+    addToCartButton
+}
+renderProductos(productos)
+
+function addToCartButton () {
+    addButton = document.querySelectorAll(".productoAgregar")
+    addButton.forEach(button => {
+        button.onclick = (e) => {
+            const productId = e.currentTarget.id
+            const selecterProducts = productos.find(producto => producto.id == productId)
+            cartProducts.push(selecterProducts)
+            console.log(cartProducts)
+
+            localStorage.setItem("cartProducts", JSON.stringify(cartProducts))
+        }
+    })
 }
