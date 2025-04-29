@@ -37,26 +37,17 @@ const productos=[
 ]
 
 
-// let products= document.getElementById("productos")
-// productos.forEach(producto=>{
-//     let contenedor = document.createElement("div")
-//     contenedor.className="card"
-//     contenedor.innerHTML= `<span> ID ${producto.id}</span>
-//                             <h3>Producto: ${producto.nombre}</h3
-//                             <h4> Precio: ${producto.precio}</h4>`
-//     products.appendChild(contenedor)
-// })
 
 let cartProducts=[]
 let productsContainer= document.getElementById("products-container")
 
 function renderProductos(productsArrays){
     productsArrays.forEach(producto => {
-        const cart = document.createElement("div")
+        const cart = document.createElement("div");
+        cart.classList.add('producto');
         cart.innerHTML=`<h3> ${producto.nombre}</h3>
                         <p> ${producto.precio}</p>
-                        <button class="productoAgregar" id="${producto.id}">Agregar</h4>`
-            
+                        <button class="productoAgregar" id=" ${producto.id}">Agregar</h4>`
             productsContainer.appendChild(cart)
         
     })
