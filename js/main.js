@@ -31,7 +31,7 @@ const productos=[
     },
     {
         id:5,
-        nombre: "MCortado o macchiatoocca",
+        nombre: "Macchiatoocca",
         precio: 1200
     }
 ]
