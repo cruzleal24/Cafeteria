@@ -62,7 +62,6 @@ function addToCartButton () {
             const productId = e.currentTarget.id
             const selecterProducts = productos.find(producto => producto.id == productId)
             cartProducts.push(selecterProducts)
-            console.log(cartProducts)
 
             localStorage.setItem("cartProducts", JSON.stringify(cartProducts))
         }
