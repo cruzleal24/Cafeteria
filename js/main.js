@@ -51,7 +51,7 @@ function renderProductos(productsArrays){
             productsContainer.appendChild(cart)
         
     })
-    addToCartButton
+    addToCartButton()
 }
 renderProductos(productos)
 
