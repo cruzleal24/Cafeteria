@@ -15,3 +15,5 @@ function renderCarrito(cartItems) {
     })
 }
 renderCarrito(cartStorage)
+
+
