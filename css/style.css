@@ -94,3 +94,29 @@ h2 a{
     width: 80%;
     height: 150px;
 }
+.sectionCompra{
+    height: 90px;
+    margin: auto;
+    display: flex;
+}
+.comprar{
+    margin: auto;
+}
+
+@media (max-width: 1107px) {
+  .desglose{
+    display: flex;
+    flex-direction: column;
+}
+.contentTicket{
+    width: 90%;
+    min-width: 300px;
+    padding: 20px;
+    overflow: hidden;
+}
+.generalResumen{
+    margin-top: 20px;
+     width: 90%;
+     padding: 20px;
+}
+}

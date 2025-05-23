@@ -17,3 +17,13 @@ function renderCarrito(cartItems) {
 renderCarrito(cartStorage)
 
 
+const comprar= document.querySelector(".comprar")
+comprar.addEventListener("click",()=>{
+    Swal.fire({
+  title: "Compra Exitosa",
+  icon: "success",
+  draggable: true
+});
+})
+
+
